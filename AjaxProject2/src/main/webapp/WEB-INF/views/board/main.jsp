@@ -53,7 +53,9 @@
         	 }else{
         	  listHtml+="<br/>";
            	  listHtml+="<span id='ub"+obj.idx+"'><button disabled class='btn btn-success btn-sm' onclick='goUpdateForm("+obj.idx+")'>수정화면</button></span>&nbsp;";
-           	  listHtml+="<button disabled class='btn btn-warning btn-sm' onclick='goDelete("+obj.idx+")'>삭제</button>";	 
+           	  
+           	  listHtml+="<button disabled class='btn btn-warning btn-sm' onclick='goDelete("+obj.idx+")'>삭제</button>";
+           	  
         	 }
         	 listHtml+="</td>";
         	 listHtml+="</tr>";
@@ -171,7 +173,7 @@
     <div class="panel-heading">BOARD</div>
     <div class="panel-body" id="view">Panel Content</div>
     <div class="panel-body" id="wfrom" style="display: none">
-     <form id="frm" accept-charset="utf-8">
+     <form id="frm" accept-charset="utf-8" method="post">
       <input type="hidden" name="memID" id="memID" value="${mvo.memID}"/>
       <table class="table">
          <tr>
